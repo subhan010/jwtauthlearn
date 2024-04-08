@@ -3,6 +3,7 @@ package com.jwttest.jwttest.controllers;
 import com.jwttest.jwttest.models.JWTRequest;
 import com.jwttest.jwttest.models.JWTResponse;
 import com.jwttest.jwttest.security.JWTHelper;
+import com.jwttest.jwttest.services.CustomUserDetailsService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,7 +21,7 @@ import org.springframework.web.bind.annotation.*;
 public class AuthController {
 
     @Autowired
-    private UserDetailsService userDetailsService;
+    private CustomUserDetailsService userDetailsService;
 
     @Autowired
     private AuthenticationManager manager;

@@ -28,18 +28,18 @@ import java.net.InetSocketAddress;
 public class AppConfig {
 
 
-    @Bean
-    public UserDetailsService userDetailsService() {
-        UserDetails userDetails = User.builder().
-                username("Rocket")
-                .password(passwordEncoder().encode("Rocket")).roles("ADMIN").
-                build();
-        UserDetails userDetails1 = User.builder().
-                username("nurse")
-                .password(passwordEncoder().encode("nurse1")).roles("Nurse").
-                build();
-        return new InMemoryUserDetailsManager(userDetails,userDetails1);
-    }
+//    @Bean
+//    public UserDetailsService userDetailsService() {
+//        UserDetails userDetails = User.builder().
+//                username("Rocket")
+//                .password(passwordEncoder().encode("Rocket")).roles("ADMIN").
+//                build();
+//        UserDetails userDetails1 = User.builder().
+//                username("nurse")
+//                .password(passwordEncoder().encode("nurse1")).roles("Nurse").
+//                build();
+//        return new InMemoryUserDetailsManager(userDetails,userDetails1);
+//    }
 
     @Bean
     public PasswordEncoder passwordEncoder() {
